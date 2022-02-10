@@ -35,9 +35,6 @@
             }
         ]
     },
-    "activationEvents": [
-        "onLanguage:json"
-    ],
     "icon": "./icons/jsonl.png",
     "repository": {
         "type": "git",
