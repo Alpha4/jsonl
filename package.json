@@ -2,6 +2,7 @@
     "name": "jsonl",
     "displayName": "JSON Lines",
     "description": "JSON Lines (jsonl) language support",
+    "license": "MIT",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.64.0"
@@ -9,6 +10,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onLanguage:jsonl"
+    ],
+    "main": "./client/out/extension",
     "contributes": {
         "languages": [
             {
@@ -35,12 +40,24 @@
             }
         ]
     },
-    "activationEvents": [
-        "onLanguage:json"
-    ],
     "icon": "./icons/jsonl.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/Alpha4/jsonl.git"
+    },
+    "scripts": {
+        "vscode:prepublish": "cd client && npm install && cd .. && npm run compile",
+        "compile": "tsc -b",
+        "watch": "tsc -b -w",
+        "lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+        "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+    },
+    "devDependencies": {
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.12.0",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "eslint": "^7.26.0",
+        "typescript": "^4.5.5"
     }
 }
