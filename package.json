@@ -1,0 +1,42 @@
+{
+    "name": "jsonl",
+    "displayName": "JSON Lines",
+    "description": "JSON Lines (jsonl) language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "jsonl",
+                "aliases": [
+                    "JSON Lines",
+                    "jsonl",
+                    "JSONL"
+                ],
+                "extensions": [
+                    ".jsonl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jsonl",
+                "scopeName": "source.jsonl",
+                "path": "./syntaxes/jsonl.tmLanguage.json",
+                "embeddedLanguages": {
+                    "line": "json"
+                }
+            }
+        ]
+    },
+    "activationEvents": [
+        "onLanguage:json"
+    ],
+    "icon": "./icons/jsonl.png"
+}
