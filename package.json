@@ -38,5 +38,9 @@
     "activationEvents": [
         "onLanguage:json"
     ],
-    "icon": "./icons/jsonl.png"
+    "icon": "./icons/jsonl.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Alpha4/jsonl.git"
+    }
 }
